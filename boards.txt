@@ -127,6 +127,43 @@ Generic_nRF52832.menu.lfclk.lfsynt=Synthesized
 Generic_nRF52832.menu.lfclk.lfsynt.build.lfclk_flags=-DUSE_LFSYNT
 
 
+Ellume.name=Ellume COVID Test (nRF52810)
+
+Ellume.upload.tool=sandeepmistry:blackmagicprobe
+Ellume.upload.target=nrf52
+Ellume.upload.maximum_size=524288
+
+Ellume.bootloader.tool=sandeepmistry:blackmagicprobe
+
+Ellume.build.mcu=cortex-m4
+Ellume.build.f_cpu=64000000
+Ellume.build.board=ELLUME
+Ellume.build.core=nRF5
+Ellume.build.variant=Ellume
+Ellume.build.variant_system_lib=
+Ellume.build.extra_flags=-DNRF52
+Ellume.build.float_flags=-mfloat-abi=hard -mfpu=fpv4-sp-d16
+Ellume.build.ldscript=nrf52810_xxaa.ld
+
+Ellume.menu.softdevice.none=None
+Ellume.menu.softdevice.none.softdevice=none
+Ellume.menu.softdevice.none.softdeviceversion=
+
+Ellume.menu.softdevice.s132=S132
+Ellume.menu.softdevice.s132.softdevice=s132
+Ellume.menu.softdevice.s132.softdeviceversion=2.0.1
+Ellume.menu.softdevice.s132.upload.maximum_size=409600
+Ellume.menu.softdevice.s132.build.extra_flags=-DNRF52 -DS132 -DNRF51_S132
+Ellume.menu.softdevice.s132.build.ldscript=armgcc_s132_nrf52810_xxaa.ld
+
+Ellume.menu.lfclk.lfxo=Crystal Oscillator
+Ellume.menu.lfclk.lfxo.build.lfclk_flags=-DUSE_LFXO
+Ellume.menu.lfclk.lfrc=RC Oscillator
+Ellume.menu.lfclk.lfrc.build.lfclk_flags=-DUSE_LFRC
+Ellume.menu.lfclk.lfsynt=Synthesized
+Ellume.menu.lfclk.lfsynt.build.lfclk_flags=-DUSE_LFSYNT
+
+
 
 bluey.name=Electronut labs bluey
 
@@ -939,7 +976,7 @@ ng_beacon.upload.maximum_size=262144
 ng_beacon.bootloader.tool=sandeepmistry:openocd
 
 ng_beacon.build.mcu=cortex-m0
-ng_beacon.build.f_cpu=16000000
+ng_beacon.build.f_cpu=64000000
 ng_beacon.build.board=NG_BEACON
 ng_beacon.build.core=nRF5
 ng_beacon.build.variant=ng-beacon
