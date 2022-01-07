@@ -142,7 +142,7 @@ Ellume.build.core=nRF5
 Ellume.build.variant=Ellume
 Ellume.build.variant_system_lib=
 Ellume.build.extra_flags=-DNRF52
-Ellume.build.float_flags=-mfloat-abi=hard -mfpu=fpv4-sp-d16
+Ellume.build.float_flags=-mfloat-abi=soft
 Ellume.build.ldscript=nrf52810_xxaa.ld
 
 Ellume.menu.softdevice.none=None
