@@ -91,7 +91,7 @@ void loop() {
 
       // Wake after some time
 #define WAKE_SECS 30
-      NRF_RTC0->PRESCALER = 3095; // 8Hz
+      NRF_RTC0->PRESCALER = 4095; // 8Hz
       NRF_RTC0->CC[0] = WAKE_SECS * 8;
       
       NRF_RTC0->INTENSET = RTC_INTENSET_COMPARE0_Msk;
