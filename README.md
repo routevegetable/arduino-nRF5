@@ -1,3 +1,23 @@
+# Ellume COVID test Arduino Core
+
+This is a modification of @sandeepmistry's Arduino nRF5 core to support the nRF52810-based Ellume COVID test; scroll down for the original README for that core.
+
+It also includes a basic demo function to broadcast a BLE beacon, see `cores/nRF5/src/nrf_ble_utils.cpp:beacon_init` . This code is based on Adafruit BluefruitLib.
+
+I created this because the Adafruit core and required libraries cannot fit on the flash in the nRF52810.
+
+See 'beacon-example.ino' for an example of a temperature sensor beacon.
+
+## Changes
+* Ellume COVID test board
+* nRF52810 core
+* Upgraded SoftDevice s132 to v6.1.1
+* BLE beacon code
+
+
+Original nRF5 core README:
+---
+
 # Arduino Core for Nordic Semiconductor nRF5 based boards
 
 [![Build Status](https://travis-ci.org/sandeepmistry/arduino-nRF5.svg?branch=master)](https://travis-ci.org/sandeepmistry/arduino-nRF5) [![OpenCollective](https://opencollective.com/arduino-nRF5/backers/badge.svg)](#backers)
